@@ -1,10 +1,9 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export default function createMarkup(imagesObject, searchFormEl) {
-    // Notify.info(`Hooray! We found ${imagesObject.totalHits} images.`)
     console.log(imagesObject);
+
     const markUp = imagesObject.reduce((acc, object) => {
     return  acc + `
     <div class="photo-card">
@@ -32,5 +31,6 @@ export default function createMarkup(imagesObject, searchFormEl) {
     </div>`}
         , '');
     searchFormEl.innerHTML = markUp;
-    new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250, });  
+    const lightBox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250, });
+    console.log(lightBox);
 }

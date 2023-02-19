@@ -1,3 +1,5 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 export default async function addMarkup(imagesObject, searchFormEl) {
     const markUp = imagesObject.reduce((acc, object) => {
@@ -27,7 +29,7 @@ export default async function addMarkup(imagesObject, searchFormEl) {
     </div>`}
         , '');
     searchFormEl.insertAdjacentHTML('beforeend', markUp);
-    new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250, });  
+    const lightBox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250, });  
 }
 
 
