@@ -31,6 +31,4 @@ export default function createMarkup(imagesObject, searchFormEl) {
     </div>`}
         , '');
     searchFormEl.innerHTML = markUp;
-    const lightBox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250, });
-    console.log(lightBox);
 }
