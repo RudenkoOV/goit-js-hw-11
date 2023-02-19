@@ -1,9 +1,4 @@
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-
 export default function createMarkup(imagesObject, searchFormEl) {
-    console.log(imagesObject);
-
     const markUp = imagesObject.reduce((acc, object) => {
     return  acc + `
     <div class="photo-card">
@@ -30,5 +25,5 @@ export default function createMarkup(imagesObject, searchFormEl) {
         </a>
     </div>`}
         , '');
-    searchFormEl.innerHTML = markUp;
+    searchFormEl.innerHTML = markUp;    
 }
